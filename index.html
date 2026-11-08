@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f8ff">
-  <meta name="description" content="Take a friendly, short test to explore your interests, strengths, and possible study and career paths.">
-  <title>BrightPath — Discover your strengths</title>
+  <meta name="description" content="Ikuti tes singkat dan ramah untuk mengenali minat, kekuatan, serta pilihan jurusan dan karier masa depanmu.">
+  <title>BrightPath — Kenali Potensi &amp; Minatmu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,43 +20,52 @@
       </span>
       <span>brightpath<span class="brand-period">.</span></span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#home" data-nav="home">Home</a>
-      <a class="nav-link" href="#test" data-nav="test">Take the test</a>
-      <a class="nav-link" href="#about" data-nav="about">About</a>
-      <a class="nav-cta" href="#test">Find your path <span aria-hidden="true">↗</span></a>
-    </nav>
+
+    <div class="header-right">
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-nav="home" data-i18n="nav.home">Beranda</a>
+        <a class="nav-link" href="#test" data-nav="test" data-i18n="nav.test">Ikuti Tes</a>
+        <a class="nav-link" href="#about" data-nav="about" data-i18n="nav.about">Tentang</a>
+        <a class="nav-cta" href="#test"><span data-i18n="nav.cta">Temukan Minatmu</span> <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <div class="lang-switch" role="group" aria-label="Pilih Bahasa / Language selection">
+        <button class="lang-btn active" type="button" data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true">ID</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="view hero-view" id="home" data-view="home">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-dot"></span> A little clarity goes a long way</div>
-        <h1>Discover your strengths.<br><span>Find your path.</span></h1>
-        <p class="hero-description">A few thoughtful questions can help you uncover what you enjoy—and the possibilities worth exploring next.</p>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">Sedikit kejelasan membuka banyak jalan</span></div>
+        <h1 data-i18n="hero.title">Kenali kelebihanmu.<br><span>Temukan masa depanmu.</span></h1>
+        <p class="hero-description" data-i18n="hero.desc">Beberapa pertanyaan sederhana dapat membantumu menemukan hal yang kamu sukai—dan berbagai peluang seru yang bisa dijelajahi selanjutnya.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#test">Start the test <span aria-hidden="true">→</span></a>
-          <a class="text-link" href="#about">How it works <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#test" data-i18n="hero.start">Mulai Tes <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#about" data-i18n="hero.howItWorks">Cara Kerja <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-proof">
           <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div>
-          <p>Made for curious minds<br><strong>like yours.</strong></p>
+          <p data-i18n="hero.proof">Dibuat untuk mereka yang ingin tahu<br><strong>seperti kamu.</strong></p>
         </div>
       </div>
-      <div class="hero-art" aria-label="Illustration of students exploring ideas and future paths">
+      <div class="hero-art" aria-label="Ilustrasi siswa mengeksplorasi minat dan masa depan">
         <div class="art-orbit orbit-one"></div>
         <div class="art-orbit orbit-two"></div>
         <div class="art-spark spark-one">✦</div>
         <div class="art-spark spark-two">✳</div>
-        <div class="art-note note-top"><span class="note-icon">✦</span><span>YOUR NEXT<br><strong>CHAPTER</strong></span></div>
+        <div class="art-note note-top"><span class="note-icon">✦</span><span data-i18n="hero.noteTop">LANGKAH<br><strong>SELANJUTNYA</strong></span></div>
         <div class="art-card card-back"></div>
         <div class="art-card card-front">
-          <div class="card-topline"><span>YOUR INTEREST MAP</span><span class="tiny-dots">•••</span></div>
+          <div class="card-topline"><span data-i18n="hero.cardTopline">PETA MINATMU</span><span class="tiny-dots">•••</span></div>
           <div class="map-graphic">
-            <svg viewBox="0 0 340 226" role="img" aria-label="A winding path connecting technology, creativity, and people">
+            <svg viewBox="0 0 340 226" role="img" aria-label="Jalur menghubungkan teknologi, kreativitas, dan hubungan sosial">
               <path d="M31 187C73 187 68 135 111 135s44 43 79 24 31-65 71-65 25-43 50-54" fill="none" stroke="#bfd4ff" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 1"/>
               <path d="M31 187C73 187 68 135 111 135s44 43 79 24 31-65 71-65 25-43 50-54" fill="none" stroke="#648bef" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 1"/>
               <circle cx="31" cy="187" r="12" fill="#e2ecff"/><circle cx="31" cy="187" r="5" fill="#4778ed"/>
@@ -64,107 +73,107 @@
               <circle cx="190" cy="159" r="12" fill="#e2ecff"/><circle cx="190" cy="159" r="5" fill="#4778ed"/>
               <circle cx="261" cy="94" r="12" fill="#e2ecff"/><circle cx="261" cy="94" r="5" fill="#4778ed"/>
               <circle cx="311" cy="40" r="17" fill="#4778ed"/><path d="m304 40 5 5 10-11" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="12" y="218" fill="#73809a" font-size="10">START</text><text x="275" y="18" fill="#73809a" font-size="10">YOU</text>
+              <text id="svg-map-start" x="12" y="218" fill="#73809a" font-size="10">MULAI</text><text id="svg-map-you" x="275" y="18" fill="#73809a" font-size="10">KAMU</text>
             </svg>
           </div>
-          <div class="map-labels"><span>Curiosity</span><span>Possibility</span></div>
+          <div class="map-labels"><span data-i18n="hero.label1">Rasa Ingin Tahu</span><span data-i18n="hero.label2">Peluang</span></div>
         </div>
         <div class="art-person person-left"><div class="person-head"></div><div class="person-hair"></div><div class="person-body"><span class="shirt-detail"></span></div><div class="person-arm"></div></div>
         <div class="art-person person-right"><div class="person-head"></div><div class="person-hair"></div><div class="person-body"><span class="shirt-detail"></span></div><div class="person-arm"></div></div>
-        <div class="art-note note-bottom"><span class="note-bubble">↗</span><span>Made for<br><strong>what's next</strong></span></div>
+        <div class="art-note note-bottom"><span class="note-bubble">↗</span><span data-i18n="hero.noteBottom">Dirancang untuk<br><strong>masa depanmu</strong></span></div>
         <div class="art-ground"></div>
       </div>
       <div class="hero-bottom">
-        <span>YOUR FUTURE ISN'T ONE-SIZE-FITS-ALL</span>
+        <span data-i18n="hero.bottom1">MASA DEPANMU TIDAK HARUS SAMA DENGAN ORANG LAIN</span>
         <span class="bottom-line"></span>
-        <span>START WITH WHAT YOU LOVE <span aria-hidden="true">↓</span></span>
+        <span data-i18n="hero.bottom2">MULAI DARI HAL YANG KAMU SUKAI <span aria-hidden="true">↓</span></span>
       </div>
     </section>
 
     <section class="view test-view is-hidden" id="test" data-view="test" aria-labelledby="test-heading">
       <div class="test-shell">
-        <div class="section-kicker"><span class="kicker-line"></span> YOUR SELF-DISCOVERY JOURNEY</div>
+        <div class="section-kicker"><span class="kicker-line"></span> <span data-i18n="test.kicker">PERJALANAN MENGENAL DIRI</span></div>
         <div id="instructions-panel" class="instructions-panel">
           <div class="test-heading-row">
             <div>
-              <p class="step-label">FIRST, A QUICK NOTE</p>
-              <h1 id="test-heading">Make this about <span>you.</span></h1>
-              <p class="test-intro">There are no right or wrong answers. Choose what feels most like you, not what you think you should choose.</p>
+              <p class="step-label" data-i18n="test.stepLabel">CATATAN SINGKAT SEBELUM MULAI</p>
+              <h1 id="test-heading" data-i18n="test.heading">Fokuslah pada <span>dirimu sendiri.</span></h1>
+              <p class="test-intro" data-i18n="test.intro">Tidak ada jawaban yang benar atau salah. Pilihlah yang paling menggambarkan dirimu, bukan yang menurutmu seharusnya dipilih.</p>
             </div>
             <div class="test-intro-art" aria-hidden="true"><span>✦</span><div class="intro-orbit"></div><div class="intro-star">✳</div></div>
           </div>
           <div class="instruction-grid">
-            <div class="instruction-card"><span class="instruction-number">01</span><div><strong>Be honest</strong><p>Think about what you genuinely enjoy.</p></div></div>
-            <div class="instruction-card"><span class="instruction-number">02</span><div><strong>Go with your gut</strong><p>Pick the answer that feels most like you.</p></div></div>
-            <div class="instruction-card"><span class="instruction-number">03</span><div><strong>Keep it light</strong><p>Don't overthink it—this is just a starting point.</p></div></div>
+            <div class="instruction-card"><span class="instruction-number">01</span><div><strong data-i18n="test.rule1Title">Jujur pada diri sendiri</strong><p data-i18n="test.rule1Desc">Pikirkan apa yang benar-benar kamu nikmati.</p></div></div>
+            <div class="instruction-card"><span class="instruction-number">02</span><div><strong data-i18n="test.rule2Title">Ikuti kata hatimu</strong><p data-i18n="test.rule2Desc">Pilih jawaban yang paling sesuai dengan dirimu.</p></div></div>
+            <div class="instruction-card"><span class="instruction-number">03</span><div><strong data-i18n="test.rule3Title">Santai saja</strong><p data-i18n="test.rule3Desc">Jangan terlalu dipikirkan—ini hanyalah langkah awal.</p></div></div>
           </div>
-          <div class="test-start-row"><span><span class="mini-clock">◷</span> About 4 minutes <span class="start-separator">·</span> 20 questions</span><button class="button button-primary" id="begin-test" type="button">Start now <span aria-hidden="true">→</span></button></div>
+          <div class="test-start-row"><span><span class="mini-clock">◷</span> <span data-i18n="test.estimate">Sekitar 4 menit</span> <span class="start-separator">·</span> <span data-i18n="test.questionTotal">20 pertanyaan</span></span><button class="button button-primary" id="begin-test" type="button" data-i18n="test.begin">Mulai Sekarang <span aria-hidden="true">→</span></button></div>
         </div>
 
         <div id="question-panel" class="question-panel is-hidden" aria-live="polite">
-          <div class="question-progress-header"><span class="step-label" id="question-count">QUESTION 1 OF 20</span><span class="progress-number" id="progress-number">1 / 20</span></div>
-          <div class="progress-track" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+          <div class="question-progress-header"><span class="step-label" id="question-count">PERTANYAAN 1 DARI 20</span><span class="progress-number" id="progress-number">1 / 20</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Kemajuan tes" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
           <p class="question-topic" id="question-topic"></p>
           <h2 class="question-title" id="question-title" tabindex="-1"></h2>
-          <p class="question-hint">Choose one answer that feels most like you.</p>
+          <p class="question-hint" data-i18n="test.hint">Pilih satu jawaban yang paling menggambarkan dirimu.</p>
           <div class="answer-list" id="answer-list" role="group" aria-labelledby="question-title"></div>
-          <div class="question-footer"><button class="button button-quiet" id="previous-question" type="button"><span aria-hidden="true">←</span> Previous</button><span class="save-note"><span class="save-dot"></span> Your answers stay on this device</span><button class="button button-primary" id="next-question" type="button" disabled>Next <span aria-hidden="true">→</span></button></div>
+          <div class="question-footer"><button class="button button-quiet" id="previous-question" type="button" data-i18n="test.prev"><span aria-hidden="true">←</span> Sebelumnya</button><span class="save-note"><span class="save-dot"></span> <span data-i18n="test.saveNote">Jawabanmu hanya tersimpan di perangkat ini</span></span><button class="button button-primary" id="next-question" type="button" disabled data-i18n="test.next">Lanjut <span aria-hidden="true">→</span></button></div>
         </div>
       </div>
     </section>
 
     <section class="view result-view is-hidden" id="results" data-view="results" aria-labelledby="result-heading" aria-live="polite">
       <div class="results-shell">
-        <div class="result-topline"><div class="section-kicker"><span class="kicker-line"></span> YOUR SELF-DISCOVERY SNAPSHOT</div><button class="result-home-link" id="back-home" type="button">← Back to home</button></div>
+        <div class="result-topline"><div class="section-kicker"><span class="kicker-line"></span> <span data-i18n="result.kicker">RINGKASAN POTENSI DIRIMU</span></div><button class="result-home-link" id="back-home" type="button" data-i18n="result.backHome">← Kembali ke beranda</button></div>
         <div class="result-hero">
           <div class="result-copy">
-            <div class="result-celebration"><span aria-hidden="true">✦</span> A lovely place to start</div>
-            <p class="result-pretitle">BASED ON YOUR ANSWERS, YOU MAY ENJOY EXPLORING</p>
+            <div class="result-celebration"><span aria-hidden="true">✦</span> <span data-i18n="result.celebration">Awal yang menyenangkan untuk memulai</span></div>
+            <p class="result-pretitle" data-i18n="result.pretitle">BERDASARKAN JAWABANMU, KAMU MUNGKIN COCOK MENJELAJAHI</p>
             <h1 id="result-heading"></h1>
             <p class="result-description" id="result-description"></p>
-            <div class="result-actions"><button class="button button-primary" id="explore-button" type="button">Explore this field <span aria-hidden="true">↗</span></button><button class="button button-outline" id="share-button" type="button"><span aria-hidden="true">⌯</span> Share my result</button></div>
+            <div class="result-actions"><button class="button button-primary" id="explore-button" type="button" data-i18n="result.exploreBtn">Jelajahi Bidang Ini <span aria-hidden="true">↗</span></button><button class="button button-outline" id="share-button" type="button" data-i18n="result.shareBtn"><span aria-hidden="true">⌯</span> Bagikan Hasilku</button></div>
           </div>
-          <div class="result-illustration" aria-hidden="true"><div class="result-sun"></div><div class="result-cloud cloud-a"></div><div class="result-cloud cloud-b"></div><div class="result-mountain mountain-back"></div><div class="result-mountain mountain-front"></div><div class="result-flag">YOUR<br>NEXT STEP <span>✦</span></div><div class="result-path"></div></div>
+          <div class="result-illustration" aria-hidden="true"><div class="result-sun"></div><div class="result-cloud cloud-a"></div><div class="result-cloud cloud-b"></div><div class="result-mountain mountain-back"></div><div class="result-mountain mountain-front"></div><div class="result-flag" data-i18n="result.flag">LANGKAH<br>SELANJUTNYA <span>✦</span></div><div class="result-path"></div></div>
         </div>
         <div class="result-content-grid">
           <article class="result-card strengths-card">
-            <div class="result-card-heading"><span class="result-icon icon-strength">✳</span><div><p class="card-overline">WHAT YOU BRING</p><h2>Strengths you might recognize</h2></div></div>
-            <p class="card-description">Your answers point to qualities you may enjoy using more often.</p>
+            <div class="result-card-heading"><span class="result-icon icon-strength">✳</span><div><p class="card-overline" data-i18n="result.strengthsOverline">POTENSI UNGGULANMU</p><h2 data-i18n="result.strengthsTitle">Kelebihan yang mungkin kamu miliki</h2></div></div>
+            <p class="card-description" data-i18n="result.strengthsDesc">Jawabanmu menunjukkan kualitas dan kelebihan yang bisa kamu kembangkan lebih jauh.</p>
             <ul class="strength-list" id="strength-list"></ul>
           </article>
           <article class="result-card explore-card" id="field-details">
-            <div class="result-card-heading"><span class="result-icon icon-explore">↗</span><div><p class="card-overline">FOLLOW YOUR CURIOSITY</p><h2>Ideas to explore</h2></div></div>
-            <div class="detail-block"><h3>Areas you can explore</h3><div class="tag-list" id="areas-list"></div></div>
-            <div class="detail-block"><h3>Study programs to consider</h3><div class="tag-list" id="study-list"></div></div>
-            <div class="detail-block"><h3>Career fields to explore</h3><div class="tag-list" id="careers-list"></div></div>
-            <div class="growth-note"><span class="growth-icon">↗</span><p><strong>A small next step</strong><span id="growth-tip"></span></p></div>
+            <div class="result-card-heading"><span class="result-icon icon-explore">↗</span><div><p class="card-overline" data-i18n="result.exploreOverline">IKUTI RASA INGIN TAHUMU</p><h2 data-i18n="result.exploreTitle">Ide untuk dieksplorasi</h2></div></div>
+            <div class="detail-block"><h3 data-i18n="result.areasTitle">Bidang minat yang bisa dipelajari</h3><div class="tag-list" id="areas-list"></div></div>
+            <div class="detail-block"><h3 data-i18n="result.studiesTitle">Program studi / jurusan yang cocok</h3><div class="tag-list" id="study-list"></div></div>
+            <div class="detail-block"><h3 data-i18n="result.careersTitle">Pilihan karier yang menjanjikan</h3><div class="tag-list" id="careers-list"></div></div>
+            <div class="growth-note"><span class="growth-icon">↗</span><p><strong data-i18n="result.tipTitle">Langkah kecil selanjutnya</strong><span id="growth-tip"></span></p></div>
           </article>
         </div>
         <section class="alternatives-section" id="alternatives-section">
-          <div class="alternatives-heading"><div><p class="card-overline">MORE THAN ONE WAY FORWARD</p><h2 id="alternatives-title">Other fields you may like</h2></div><p>It's okay to be interested in more than one thing.</p></div>
+          <div class="alternatives-heading"><div><p class="card-overline" data-i18n="result.altOverline">BANYAK JALAN MENUJU MASA DEPAN</p><h2 id="alternatives-title" data-i18n="result.altTitle">Bidang lain yang mungkin kamu sukai</h2></div><p data-i18n="result.altSubtitle">Sangat wajar jika kamu tertarik pada lebih dari satu hal.</p></div>
           <div class="alternative-grid" id="alternative-grid"></div>
         </section>
-        <div class="result-disclaimer"><span aria-hidden="true">ⓘ</span><p>This is a friendly recommendation based only on your answers—not a professional psychological assessment or a final career decision. Your interests can grow and change, so stay curious.</p></div>
-        <div class="result-footer"><button class="button button-outline" id="retake-button" type="button"><span aria-hidden="true">↻</span> Retake the test</button><a class="result-about-link" href="#about">A little more about BrightPath <span aria-hidden="true">→</span></a></div>
+        <div class="result-disclaimer"><span aria-hidden="true">ⓘ</span><p data-i18n="result.disclaimer">Ini adalah rekomendasi ramah berdasarkan jawabanmu—bukan tes psikologi profesional atau penentu keputusan karier mutlak. Minat dan potensimu bisa terus berkembang, tetaplah bersemangat dan ingin tahu!</p></div>
+        <div class="result-footer"><button class="button button-outline" id="retake-button" type="button" data-i18n="result.retake"><span aria-hidden="true">↻</span> Ulangi Tes</button><a class="result-about-link" href="#about" data-i18n="result.aboutLink">Pelajari lebih lanjut tentang BrightPath <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
     <section class="view about-view is-hidden" id="about" data-view="about" aria-labelledby="about-heading">
       <div class="about-shell">
-        <div class="about-visual"><div class="about-sticker sticker-top">STAY<br>CURIOUS <span>✦</span></div><div class="about-sun"></div><div class="about-person"><div class="about-head"></div><div class="about-hair"></div><div class="about-torso"></div><div class="about-arm"></div></div><div class="about-book book-one"></div><div class="about-book book-two"></div><div class="about-sticker sticker-bottom"><span>✳</span> YOUR PATH<br>IS YOURS</div></div>
+        <div class="about-visual"><div class="about-sticker sticker-top" data-i18n="about.stickerTop">TETAP<br>SEMANGAT <span>✦</span></div><div class="about-sun"></div><div class="about-person"><div class="about-head"></div><div class="about-hair"></div><div class="about-torso"></div><div class="about-arm"></div></div><div class="about-book book-one"></div><div class="about-book book-two"></div><div class="about-sticker sticker-bottom" data-i18n="about.stickerBottom"><span>✳</span> JALANMU ADALAH<br>MILIKMU</div></div>
         <div class="about-copy">
-          <div class="section-kicker"><span class="kicker-line"></span> A NOTE FROM US</div>
-          <h1 id="about-heading">A little more <span>about BrightPath.</span></h1>
-          <p>Figuring out what comes next can feel like a big question. BrightPath is here to make it feel a little smaller—and a lot more exciting.</p>
-          <p>Our short, friendly test helps students notice what they enjoy, the strengths they may bring, and a few directions they might explore. It's a starting point for curiosity, not a box to fit into.</p>
-          <div class="about-values"><div><span>01</span><strong>Made for exploration</strong></div><div><span>02</span><strong>No wrong answers</strong></div><div><span>03</span><strong>Your future, your choice</strong></div></div>
-          <div class="about-disclaimer"><span>ⓘ</span><p><strong>A quick reminder</strong>This test is for educational and self-exploration purposes only. Results are suggestions based on your answers, not a professional psychological assessment or a definitive career decision.</p></div>
-          <a class="button button-primary" href="#test">Take the test <span aria-hidden="true">→</span></a>
+          <div class="section-kicker"><span class="kicker-line"></span> <span data-i18n="about.kicker">CATATAN DARI KAMI</span></div>
+          <h1 id="about-heading" data-i18n="about.heading">Lebih dekat <span>tentang BrightPath.</span></h1>
+          <p data-i18n="about.p1">Menentukan masa depan terkadang terasa seperti pertanyaan besar. BrightPath hadir untuk membuatnya terasa lebih sederhana—dan jauh lebih menyenangkan.</p>
+          <p data-i18n="about.p2">Tes singkat dan ramah ini membantu para pelajar mengenali apa yang mereka sukai, kekuatan yang mereka miliki, dan arah yang bisa mereka tuju. Ini adalah titik awal eksplorasi, bukan batasan untuk mengekang potensimu.</p>
+          <div class="about-values"><div><span>01</span><strong data-i18n="about.v1">Dirancang untuk eksplorasi</strong></div><div><span>02</span><strong data-i18n="about.v2">Tidak ada jawaban salah</strong></div><div><span>03</span><strong data-i18n="about.v3">Masa depanmu, pilihanmu</strong></div></div>
+          <div class="about-disclaimer"><span>ⓘ</span><p><strong data-i18n="about.discTitle">Pengingat Penting</strong><span data-i18n="about.discText">Tes ini bertujuan untuk edukasi dan eksplorasi diri. Hasil yang ditampilkan merupakan saran berdasarkan pilihanmu, bukan penilaian psikologis profesional atau penentu karier mutlak.</span></p></div>
+          <a class="button button-primary" href="#test" data-i18n="about.cta">Ikuti Tes <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><a class="footer-brand" href="#home">brightpath<span>.</span></a><p>A starting point for your next big idea.</p><span>Made for curious minds <span aria-hidden="true">✦</span></span></footer>
+  <footer class="site-footer"><a class="footer-brand" href="#home">brightpath<span>.</span></a><p data-i18n="footer.desc">Langkah awal untuk ide hebatmu berikutnya.</p><span><span data-i18n="footer.tagline">Dibuat untuk generasi bersemangat</span> <span aria-hidden="true">✦</span></span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
